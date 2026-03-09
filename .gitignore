@@ -1,0 +1,23 @@
+# Godot cache/editor files
+.godot/
+.import/
+/android/
+
+# Export builds
+.export/
+export_presets.cfg
+
+# Mono (apenas se usar C#)
+.mono/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Logs e temporários
+*.log
+*.tmp

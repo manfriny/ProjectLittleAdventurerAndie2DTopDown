@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://dc67x7b8e7bq6"]
+
+[ext_resource type="Texture2D" uid="uid://410dmpuv2axt" path="res://Asset/Animations/Player_Idle.png" id="1_iy04j"]
+[ext_resource type="Texture2D" uid="uid://bc1o4iwqu5bqd" path="res://Asset/Animations/Shadow.png" id="2_35b1r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p27oo"]
+radius = 4.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpmtn"]
+atlas = ExtResource("1_iy04j")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vsfp1"]
+atlas = ExtResource("1_iy04j")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbft3"]
+atlas = ExtResource("1_iy04j")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7rcsm"]
+atlas = ExtResource("1_iy04j")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrhqq"]
+atlas = ExtResource("1_iy04j")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ta36k"]
+atlas = ExtResource("1_iy04j")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p1b0j"]
+atlas = ExtResource("1_iy04j")
+region = Rect2(576, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0ct1c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpmtn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vsfp1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fbft3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7rcsm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wrhqq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ta36k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p1b0j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="Player" type="CharacterBody2D" unique_id=890702982]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1866302799]
+shape = SubResource("CircleShape2D_p27oo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=518108352]
+sprite_frames = SubResource("SpriteFrames_0ct1c")
+frame_progress = 0.6661497
+offset = Vector2(0, -20)
+
+[node name="Sprite2D_Shadow" type="Sprite2D" parent="." unique_id=6775959]
+modulate = Color(1, 1, 1, 0.5882353)
+position = Vector2(0, -1)
+texture = ExtResource("2_35b1r")
+offset = Vector2(0, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1988676674]
