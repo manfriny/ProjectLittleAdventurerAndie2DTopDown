@@ -480,8 +480,8 @@ shape = SubResource("CircleShape2D_p27oo")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=518108352]
 sprite_frames = SubResource("SpriteFrames_0ct1c")
-animation = &"Run_Up"
-frame_progress = 0.25272167
+animation = &"Idle_Down"
+frame_progress = 0.08315609
 offset = Vector2(0, -20)
 
 [node name="Sprite2D_Shadow" type="Sprite2D" parent="." unique_id=6775959]
