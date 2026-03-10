@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://c3s1q14krpq80"]
 
+[ext_resource type="Script" uid="uid://c1rw85n68h7nm" path="res://Game/Scripts/grass.gd" id="1_0124x"]
 [ext_resource type="Texture2D" uid="uid://beih8am78uglx" path="res://Asset/Level/TreeAndGrass.png" id="1_ihpms"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nc4qk"]
 
 [node name="Grass" type="Area2D" unique_id=1052647079]
 y_sort_enabled = true
+script = ExtResource("1_0124x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=154056859]
 shape = SubResource("RectangleShape2D_nc4qk")
