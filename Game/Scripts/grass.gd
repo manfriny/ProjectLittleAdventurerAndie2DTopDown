@@ -10,12 +10,12 @@ var skewTween: Tween
 var skewTweenBack: Tween
 
 var scaleTween: Tween
-var startScale = Vector2(1.0,1.0)
-var endScale = Vector2(1.0,0.7)
+var startScale = Vector2(1.0, 1.0)
+var endScale = Vector2(1.0, 0.7)
 
 
 func _ready() -> void:
-	var startSkew = deg_to_rad(randf_range(-10,10))
+	var startSkew = deg_to_rad(randf_range(-10, 10))
 	var endSkew = -startSkew
 	
 	skewTween = get_tree().create_tween().set_loops()
@@ -36,7 +36,7 @@ func _on_body_entered(_body: Node2D) -> void:
 	CreateNewScaleTween(endScale,scaleDuration)
 
 
-func _on_body_exited(body: Node2D) -> void:
+func _on_body_exited(_body: Node2D) -> void:
 	CreateNewScaleTween(startScale,scaleDuration * 3)
 
 
@@ -47,4 +47,4 @@ func CreateNewScaleTween(targetValue: Vector2, duration: float):
 	scaleTween = get_tree().create_tween()
 	scaleTween.tween_property(sprite_2d,"scale",targetValue,duration)
 	scaleTween.set_trans(Tween.TRANS_BOUNCE)
-	scaleTween.set_ease(Tween.EASE_IN)
+	scaleTween.set_ease(Tween.EASE_OUT)

@@ -3,7 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://b3j00obhb5ple" path="res://Asset/Level/Background_Grass.png" id="1_wd0a0"]
 [ext_resource type="PackedScene" uid="uid://dc67x7b8e7bq6" path="res://Game/Scenes/player.tscn" id="2_lv82p"]
 [ext_resource type="Texture2D" uid="uid://efnkxeamyf54" path="res://Asset/Level/Tilemap_Platform.png" id="2_w1egk"]
-[ext_resource type="PackedScene" uid="uid://c3s1q14krpq80" path="res://Game/Scenes/grass.tscn" id="4_rchnd"]
+[ext_resource type="Texture2D" uid="uid://beih8am78uglx" path="res://Asset/Level/TreeAndGrass.png" id="4_rl4yr"]
+[ext_resource type="Script" uid="uid://cmies8e3luysh" path="res://Game/Scripts/grass_generator.gd" id="5_g5pn2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lv82p"]
 texture = ExtResource("1_wd0a0")
@@ -515,6 +516,15 @@ terrain_set_0/terrain_0/name = "Platform 0"
 terrain_set_0/terrain_0/color = Color(1, 0, 0.36078432, 1)
 sources/0 = SubResource("TileSetAtlasSource_rchnd")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_haytw"]
+texture = ExtResource("4_rl4yr")
+texture_region_size = Vector2i(32, 32)
+2:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_3xx61"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_haytw")
+
 [node name="Node2D" type="Node2D" unique_id=1851739774]
 
 [node name="TileMapLayer_Background" type="TileMapLayer" parent="." unique_id=1344413036]
@@ -528,8 +538,10 @@ tile_set = SubResource("TileSet_rl4yr")
 [node name="Level" type="Node2D" parent="." unique_id=908585874]
 y_sort_enabled = true
 
-[node name="Grass" parent="Level" unique_id=1052647079 instance=ExtResource("4_rchnd")]
-position = Vector2(500, 712)
-
 [node name="Player" parent="Level" unique_id=890702982 instance=ExtResource("2_lv82p")]
 position = Vector2(500, 700)
+
+[node name="TileMapLayer_Grass" type="TileMapLayer" parent="Level" unique_id=2028979687]
+tile_map_data = PackedByteArray("AAAKABUAAAACAAMAAAALABUAAAACAAMAAAAMABUAAAACAAMAAAAMABYAAAACAAMAAAALABYAAAACAAMAAAAKABYAAAACAAMAAAANABYAAAACAAMAAAANABcAAAACAAMAAAAOABcAAAACAAMAAAAPABcAAAACAAMAAAAMABcAAAACAAMAAAANABgAAAACAAMAAAAOABgAAAACAAMAAAAPABgAAAACAAMAAAA=")
+tile_set = SubResource("TileSet_3xx61")
+script = ExtResource("5_g5pn2")
