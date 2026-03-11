@@ -410,3 +410,9 @@ offset_right = 107.0
 offset_bottom = 23.0
 scale = Vector2(0.3, 0.3)
 text = "CurrentState"
+
+[node name="Line2D" type="Line2D" parent="." unique_id=1810452515]
+z_index = 100
+points = PackedVector2Array(0, 0, 20, 20)
+width = 2.0
+default_color = Color(0, 0.627451, 0.42745098, 1)
