@@ -9,3 +9,4 @@ func UpdatePhysics(delta: float):
 
 func Update():
 	super.Update()
+	character.UpdateAnimation()

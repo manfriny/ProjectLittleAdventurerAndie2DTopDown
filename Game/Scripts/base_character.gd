@@ -2,6 +2,7 @@ extends CharacterBody2D
 class_name BaseCharacter
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var state_machine: StateMachine = $StateMachine
 
 var inputDirecton : Vector2 = Vector2.ZERO
 var facingDirection : String = "Down"
@@ -24,3 +25,7 @@ func GetDirectionName() -> String:
 			facingDirection = "Left"
 	
 	return facingDirection
+
+
+func UpdateAnimation():
+	animated_sprite_2d.play(state_machine.currentState.name + "_" + GetDirectionName())

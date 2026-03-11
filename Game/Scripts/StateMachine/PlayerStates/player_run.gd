@@ -12,4 +12,8 @@ func UpdatePhysics(delta: float):
 	
 	character.velocity = character.velocity.lerp(character.inputDirecton * SPEED, ACCELERATE * delta)
 	character.move_and_slide()
-	
+
+
+func Update():
+	super.Update()
+	character.UpdateAnimation()
