@@ -505,3 +505,11 @@ script = ExtResource("6_fbft3")
 
 [node name="Run" type="Node" parent="StateMachine" unique_id=523624894]
 script = ExtResource("7_7rcsm")
+
+[node name="Debug_Label" type="Label" parent="." unique_id=213625221]
+z_index = 100
+offset_left = 7.0
+offset_right = 107.0
+offset_bottom = 23.0
+scale = Vector2(0.3, 0.3)
+text = "CurrentState"

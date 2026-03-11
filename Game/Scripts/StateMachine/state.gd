@@ -10,15 +10,17 @@ func UpdatePhysics(delta: float):
 
 
 func Update():
-	#print(name + " is updating")
-	pass
+	if parentStateMachine.debug_label:
+		parentStateMachine.debug_label.text = name
 
 
 func Enter():
+	#print("Entered " + name)
 	pass
 
 
 func Exit():
+	#print("Exited " + name)
 	pass
 
 

@@ -1,6 +1,8 @@
 extends Node
 class_name StateMachine
 
+@onready var debug_label: Label = $"../Debug_Label"
+
 var currentState: State
 
 func _ready() -> void:
@@ -21,3 +23,15 @@ func _physics_process(delta: float) -> void:
 
 func _process(_delta: float) -> void:
 	currentState.Update()
+
+
+func SwitchTo(targetState: String):
+	var nextStateNode = get_node(targetState)
+	
+	if !nextStateNode:
+		print("Can not find the target state node")
+		return
+	
+	currentState.Exit()
+	currentState = nextStateNode
+	currentState.Enter()
