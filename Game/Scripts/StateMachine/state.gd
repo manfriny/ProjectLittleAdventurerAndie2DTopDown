@@ -2,6 +2,7 @@ extends Node
 class_name State
 
 var parentStateMachine : StateMachine
+var character : BaseCharacter
 
 @warning_ignore("unused_parameter")
 func UpdatePhysics(delta: float):

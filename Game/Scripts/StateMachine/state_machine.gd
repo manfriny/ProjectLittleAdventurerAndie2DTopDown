@@ -10,6 +10,7 @@ func _ready() -> void:
 	for child in get_children():
 		var childState = child as State
 		childState.parentStateMachine = self
+		childState.character = get_parent()
 		childState.Ready()
 	
 	#starta no state de indice zero, que é o primeiro item abaixo de StateMachine: IDLE
