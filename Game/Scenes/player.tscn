@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://410dmpuv2axt" path="res://Asset/Animations/Player_Idle.png" id="1_iy04j"]
 [ext_resource type="Texture2D" uid="uid://bc1o4iwqu5bqd" path="res://Asset/Animations/Shadow.png" id="2_35b1r"]
 [ext_resource type="Texture2D" uid="uid://cnrro3yyw5egg" path="res://Asset/Animations/Player_Run.png" id="3_p27oo"]
+[ext_resource type="Script" uid="uid://bso0ilp5wcjbt" path="res://Game/Scripts/StateMachine/state_machine.gd" id="5_kpmtn"]
+[ext_resource type="Script" uid="uid://dpoaw4bggsl04" path="res://Game/Scripts/StateMachine/PlayerStates/player_idle.gd" id="6_fbft3"]
+[ext_resource type="Script" uid="uid://4syva8s7726v" path="res://Game/Scripts/StateMachine/PlayerStates/player_run.gd" id="7_7rcsm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p27oo"]
 radius = 4.0
@@ -493,3 +496,12 @@ texture = ExtResource("2_35b1r")
 offset = Vector2(0, 1)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1988676674]
+
+[node name="StateMachine" type="Node" parent="." unique_id=1778751397]
+script = ExtResource("5_kpmtn")
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=1095532128]
+script = ExtResource("6_fbft3")
+
+[node name="Run" type="Node" parent="StateMachine" unique_id=523624894]
+script = ExtResource("7_7rcsm")
