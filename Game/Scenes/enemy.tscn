@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://mgwyl1ca16q5"]
 
 [ext_resource type="Texture2D" uid="uid://do38kpyitklud" path="res://Asset/Animations/Enemy_Idle_Move_Hurt.png" id="1_8b7ih"]
+[ext_resource type="Script" uid="uid://dn4tkcc26amcq" path="res://Game/Scripts/enemy.gd" id="1_rqlke"]
 [ext_resource type="Texture2D" uid="uid://bc1o4iwqu5bqd" path="res://Asset/Animations/Shadow.png" id="4_eifpv"]
 [ext_resource type="Script" uid="uid://bso0ilp5wcjbt" path="res://Game/Scripts/StateMachine/state_machine.gd" id="5_lxcy7"]
+[ext_resource type="Script" uid="uid://dl76vrt3hilpp" path="res://Game/Scripts/StateMachine/EnemyStates/enemy_idle.gd" id="5_ulbln"]
+[ext_resource type="Script" uid="uid://cmb7352jgjwrs" path="res://Game/Scripts/StateMachine/EnemyStates/enemy_move.gd" id="6_fhply"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p27oo"]
 radius = 4.0
@@ -374,6 +377,7 @@ animations = [{
 y_sort_enabled = true
 collision_layer = 2
 collision_mask = 13
+script = ExtResource("1_rqlke")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1866302799]
 shape = SubResource("CircleShape2D_p27oo")
@@ -381,7 +385,7 @@ shape = SubResource("CircleShape2D_p27oo")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=518108352]
 sprite_frames = SubResource("SpriteFrames_at11h")
 animation = &"Move_Up"
-frame_progress = 0.1224123
+frame_progress = 0.6534247
 offset = Vector2(0, -40)
 
 [node name="Sprite2D_Shadow" type="Sprite2D" parent="." unique_id=6775959]
@@ -394,8 +398,10 @@ offset = Vector2(0, 1)
 script = ExtResource("5_lxcy7")
 
 [node name="Idle" type="Node" parent="StateMachine" unique_id=1095532128]
+script = ExtResource("5_ulbln")
 
 [node name="Move" type="Node" parent="StateMachine" unique_id=523624894]
+script = ExtResource("6_fhply")
 
 [node name="Debug_Label" type="Label" parent="." unique_id=213625221]
 z_index = 100
