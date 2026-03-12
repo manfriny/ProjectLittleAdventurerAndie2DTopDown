@@ -543,7 +543,7 @@ y_sort_enabled = true
 position = Vector2(500, 700)
 
 [node name="Enemy" parent="Level" unique_id=1549059771 instance=ExtResource("6_g5pn2")]
-position = Vector2(548, 741)
+position = Vector2(613, 751)
 
 [node name="TileMapLayer_Grass" type="TileMapLayer" parent="Level" unique_id=2028979687]
 visible = false

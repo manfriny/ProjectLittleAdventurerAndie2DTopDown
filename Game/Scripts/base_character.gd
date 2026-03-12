@@ -1,5 +1,4 @@
 extends CharacterBody2D
-
 class_name BaseCharacter
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
@@ -8,6 +7,8 @@ class_name BaseCharacter
 var inputDirecton : Vector2 = Vector2.ZERO
 var facingDirection : String = "Down"
 var animationToPlay : String = "Idle_"
+
+@export var showDebugVisual = true
 
 
 func GetDirectionName() -> String:
