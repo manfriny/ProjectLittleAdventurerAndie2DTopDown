@@ -420,4 +420,10 @@ default_color = Color(0, 0.627451, 0.42745098, 1)
 color = Color(1, 1, 1, 0.09803922)
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=683447606]
+target_desired_distance = 40.0
 debug_enabled = true
+
+[node name="PlayerPosUpdateTimer" type="Timer" parent="." unique_id=1292907359]
+wait_time = 0.5
+
+[connection signal="timeout" from="PlayerPosUpdateTimer" to="StateMachine/Move" method="_on_player_pos_update_timer_timeout"]

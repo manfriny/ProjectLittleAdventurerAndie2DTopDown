@@ -548,8 +548,53 @@ y_sort_enabled = true
 [node name="Player" parent="Level" unique_id=890702982 instance=ExtResource("2_lv82p")]
 position = Vector2(500, 700)
 
-[node name="Enemy" parent="Level" unique_id=1549059771 instance=ExtResource("6_g5pn2")]
+[node name="EnemyGroup" type="Node2D" parent="Level" unique_id=129885676]
+y_sort_enabled = true
+
+[node name="Enemy" parent="Level/EnemyGroup" unique_id=1549059771 instance=ExtResource("6_g5pn2")]
 position = Vector2(613, 751)
+
+[node name="Enemy2" parent="Level/EnemyGroup" unique_id=236673107 instance=ExtResource("6_g5pn2")]
+position = Vector2(592, 765)
+
+[node name="Enemy3" parent="Level/EnemyGroup" unique_id=1570635553 instance=ExtResource("6_g5pn2")]
+position = Vector2(635, 757)
+
+[node name="Enemy4" parent="Level/EnemyGroup" unique_id=1610696457 instance=ExtResource("6_g5pn2")]
+position = Vector2(620, 771)
+
+[node name="Enemy5" parent="Level/EnemyGroup" unique_id=2026212706 instance=ExtResource("6_g5pn2")]
+position = Vector2(657, 763)
+
+[node name="Enemy6" parent="Level/EnemyGroup" unique_id=1564422100 instance=ExtResource("6_g5pn2")]
+position = Vector2(642, 778)
+
+[node name="Enemy7" parent="Level/EnemyGroup" unique_id=1789874437 instance=ExtResource("6_g5pn2")]
+position = Vector2(672, 773)
+
+[node name="Enemy8" parent="Level/EnemyGroup" unique_id=287097517 instance=ExtResource("6_g5pn2")]
+position = Vector2(622, 787)
+
+[node name="Enemy9" parent="Level/EnemyGroup" unique_id=1951410217 instance=ExtResource("6_g5pn2")]
+position = Vector2(588, 773)
+
+[node name="Enemy10" parent="Level/EnemyGroup" unique_id=1311756941 instance=ExtResource("6_g5pn2")]
+position = Vector2(579, 761)
+
+[node name="Enemy11" parent="Level/EnemyGroup" unique_id=584879413 instance=ExtResource("6_g5pn2")]
+position = Vector2(581, 795)
+
+[node name="Enemy12" parent="Level/EnemyGroup" unique_id=244051674 instance=ExtResource("6_g5pn2")]
+position = Vector2(601, 802)
+
+[node name="Enemy13" parent="Level/EnemyGroup" unique_id=432102624 instance=ExtResource("6_g5pn2")]
+position = Vector2(631, 800)
+
+[node name="Enemy14" parent="Level/EnemyGroup" unique_id=1682518915 instance=ExtResource("6_g5pn2")]
+position = Vector2(663, 800)
+
+[node name="Enemy15" parent="Level/EnemyGroup" unique_id=1428574668 instance=ExtResource("6_g5pn2")]
+position = Vector2(689, 785)
 
 [node name="TileMapLayer_Grass" type="TileMapLayer" parent="Level" unique_id=2028979687]
 visible = false
@@ -558,4 +603,6 @@ tile_set = SubResource("TileSet_3xx61")
 script = ExtResource("5_g5pn2")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="Level" unique_id=1643317219]
+visible = false
+position = Vector2(-15, 12)
 navigation_polygon = SubResource("NavigationPolygon_g5pn2")
