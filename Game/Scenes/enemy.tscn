@@ -418,3 +418,6 @@ default_color = Color(0, 0.627451, 0.42745098, 1)
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=1587368320]
 color = Color(1, 1, 1, 0.09803922)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=683447606]
+debug_enabled = true
