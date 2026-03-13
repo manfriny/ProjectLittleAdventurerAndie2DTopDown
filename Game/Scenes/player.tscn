@@ -496,6 +496,7 @@ texture = ExtResource("2_35b1r")
 offset = Vector2(0, 1)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1988676674]
+zoom = Vector2(0.75, 0.75)
 
 [node name="StateMachine" type="Node" parent="." unique_id=1778751397]
 script = ExtResource("5_kpmtn")
