@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://beih8am78uglx" path="res://Asset/Level/TreeAndGrass.png" id="4_rl4yr"]
 [ext_resource type="Script" uid="uid://cmies8e3luysh" path="res://Game/Scripts/grass_generator.gd" id="5_g5pn2"]
 [ext_resource type="PackedScene" uid="uid://mgwyl1ca16q5" path="res://Game/Scenes/enemy.tscn" id="6_g5pn2"]
+[ext_resource type="PackedScene" uid="uid://bbihic3as7bg4" path="res://Game/Scenes/tree.tscn" id="7_haytw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lv82p"]
 texture = ExtResource("1_wd0a0")
@@ -552,63 +553,15 @@ position = Vector2(500, 700)
 y_sort_enabled = true
 
 [node name="Enemy" parent="Level/EnemyGroup" unique_id=1549059771 instance=ExtResource("6_g5pn2")]
-position = Vector2(613, 751)
+position = Vector2(730, 654)
 showDebugVisual = false
 
 [node name="Enemy2" parent="Level/EnemyGroup" unique_id=236673107 instance=ExtResource("6_g5pn2")]
-position = Vector2(592, 765)
+position = Vector2(287, 792)
 showDebugVisual = false
 
 [node name="Enemy3" parent="Level/EnemyGroup" unique_id=1570635553 instance=ExtResource("6_g5pn2")]
-position = Vector2(635, 757)
-showDebugVisual = false
-
-[node name="Enemy4" parent="Level/EnemyGroup" unique_id=1610696457 instance=ExtResource("6_g5pn2")]
-position = Vector2(620, 771)
-showDebugVisual = false
-
-[node name="Enemy5" parent="Level/EnemyGroup" unique_id=2026212706 instance=ExtResource("6_g5pn2")]
-position = Vector2(657, 763)
-showDebugVisual = false
-
-[node name="Enemy6" parent="Level/EnemyGroup" unique_id=1564422100 instance=ExtResource("6_g5pn2")]
-position = Vector2(642, 778)
-showDebugVisual = false
-
-[node name="Enemy7" parent="Level/EnemyGroup" unique_id=1789874437 instance=ExtResource("6_g5pn2")]
-position = Vector2(672, 773)
-showDebugVisual = false
-
-[node name="Enemy8" parent="Level/EnemyGroup" unique_id=287097517 instance=ExtResource("6_g5pn2")]
-position = Vector2(622, 787)
-showDebugVisual = false
-
-[node name="Enemy9" parent="Level/EnemyGroup" unique_id=1951410217 instance=ExtResource("6_g5pn2")]
-position = Vector2(588, 773)
-showDebugVisual = false
-
-[node name="Enemy10" parent="Level/EnemyGroup" unique_id=1311756941 instance=ExtResource("6_g5pn2")]
-position = Vector2(579, 761)
-showDebugVisual = false
-
-[node name="Enemy11" parent="Level/EnemyGroup" unique_id=584879413 instance=ExtResource("6_g5pn2")]
-position = Vector2(581, 795)
-showDebugVisual = false
-
-[node name="Enemy12" parent="Level/EnemyGroup" unique_id=244051674 instance=ExtResource("6_g5pn2")]
-position = Vector2(601, 802)
-showDebugVisual = false
-
-[node name="Enemy13" parent="Level/EnemyGroup" unique_id=432102624 instance=ExtResource("6_g5pn2")]
-position = Vector2(631, 800)
-showDebugVisual = false
-
-[node name="Enemy14" parent="Level/EnemyGroup" unique_id=1682518915 instance=ExtResource("6_g5pn2")]
-position = Vector2(663, 800)
-showDebugVisual = false
-
-[node name="Enemy15" parent="Level/EnemyGroup" unique_id=1428574668 instance=ExtResource("6_g5pn2")]
-position = Vector2(689, 785)
+position = Vector2(589, 448)
 showDebugVisual = false
 
 [node name="TileMapLayer_Grass" type="TileMapLayer" parent="Level" unique_id=2028979687]
@@ -621,3 +574,24 @@ script = ExtResource("5_g5pn2")
 visible = false
 position = Vector2(-15, 12)
 navigation_polygon = SubResource("NavigationPolygon_g5pn2")
+
+[node name="TreeGroup" type="Node2D" parent="Level" unique_id=2098467035]
+y_sort_enabled = true
+
+[node name="Tree" parent="Level/TreeGroup" unique_id=1643560363 instance=ExtResource("7_haytw")]
+position = Vector2(398, 963)
+
+[node name="Tree2" parent="Level/TreeGroup" unique_id=1621527169 instance=ExtResource("7_haytw")]
+position = Vector2(457, 967)
+
+[node name="Tree3" parent="Level/TreeGroup" unique_id=951030614 instance=ExtResource("7_haytw")]
+position = Vector2(504, 986)
+
+[node name="Tree4" parent="Level/TreeGroup" unique_id=1182007199 instance=ExtResource("7_haytw")]
+position = Vector2(364, 981)
+
+[node name="Tree5" parent="Level/TreeGroup" unique_id=590019390 instance=ExtResource("7_haytw")]
+position = Vector2(423, 990)
+
+[node name="Tree6" parent="Level/TreeGroup" unique_id=986968377 instance=ExtResource("7_haytw")]
+position = Vector2(323, 977)
